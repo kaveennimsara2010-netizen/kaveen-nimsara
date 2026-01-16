@@ -109,6 +109,8 @@ ul li a:hover{
 .content{
     width: 100%;
     min-height: 85vh;
+    max-width: 800px;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,6 +119,8 @@ ul li a:hover{
     color: #fff;
     padding: 0 20px;
     box-sizing: border-box;
+    margin: auto;
+    padding-top: 150px;
 }
 
 .content .par{
