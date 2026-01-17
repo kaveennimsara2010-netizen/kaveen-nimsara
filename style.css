@@ -201,3 +201,39 @@ ul li a:hover{
 .srch:focus{
     outline: none;
 }
+
+@media screen and (max-width: 768px) {
+    .main{
+        width: 100%;
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+    }
+
+    .content h1{
+        font-size: 35px;
+    }
+
+    .content span{
+        font-size: 30px;
+    }
+
+    .content p{
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
+    .navbar{
+        padding: 0 20px;
+    }
+
+    .menu ul li a{
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    .search{
+        display: none;
+    }
+}
