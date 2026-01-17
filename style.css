@@ -1,13 +1,14 @@
-/* පොදු සැකසුම් */
+/* මූලික සැකසුම් - අකුරු පිට පැනීම වළක්වයි */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body {
-    overflow-x: hidden; /* පැත්තට scroll වීම වළක්වයි */
+html, body {
     width: 100%;
+    overflow-x: hidden; /* පැත්තට scroll වීම සම්පූර්ණයෙන්ම නවත්වයි */
+    position: relative;
 }
 .main {
     width: 100%;
@@ -15,62 +16,38 @@ body {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('4.jpg');
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
 }
-/* Navbar එක පිළිවෙළකට සැකසීම */
+/* Navbar - ෆෝන් එකේදී අකුරු පේළියෙන් පේළියට සැකසීමට */
 .navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    background: rgba(0, 0, 0, 0.7);
-    flex-wrap: wrap; /* ෆෝන් එකේදී බිමට වැටීමට */
+    padding: 15px 5%;
+    background: rgba(0, 0, 0, 0.8);
+    flex-wrap: wrap; /* ඉඩ මදි නම් අයිතම පහළට වැටේ */
 }
 .logo-text {
     color: #48ff00;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
 }
 .menu ul {
     display: flex;
     list-style: none;
+    flex-wrap: wrap; /* මෙනු එක පිට පැනීම වළක්වයි */
+    justify-content: center;
 }
 .menu ul li a {
     text-decoration: none;
     color: white;
-    margin: 0 15px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: 0.3s;
+    margin: 5px 10px;
+    font-size: 13px;
+    white-space: nowrap; /* අකුරු කැඩීම වළක්වයි */
 }
-.menu ul li a:hover {
-    color: #48ff00;
-}
-/* සෙවුම් කොටස */
-.search {
-    display: flex;
-}
-.srch {
-    width: 120px;
-    padding: 7px;
-    border: 1px solid #48ff00;
-    background: transparent;
-    color: white;
-    outline: none;
-    border-radius: 5px 0 0 5px;
-}
-.btn {
-    padding: 7px 15px;
-    background: #48ff00;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 0 5px 5px 0;
-}
-/* මැද අකුරු (Content) හරි මැදට ගැනීම */
+/* මැද Content එක - ෆෝන් එකේදී මැදට ගැනීමට */
 .content {
     flex: 1;
     display: flex;
@@ -78,36 +55,32 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
     padding: 20px;
+    color: white;
 }
 .content h1 {
-    font-size: clamp(28px, 8vw, 60px); /* අකුරු ඉබේම ප්‍රමාණය වෙනස් වේ */
-    line-height: 1.2;
-}
-.content span {
-    color: #48ff00;
+    font-size: clamp(24px, 7vw, 50px); /* තිරය අනුව අකුරු ප්‍රමාණය වෙනස් වේ */
+    width: 100%;
+    max-width: 90vw;
 }
 .content p {
-    max-width: 600px;
-    font-size: clamp(14px, 2vw, 18px);
+    font-size: clamp(13px, 3vw, 16px);
+    max-width: 500px;
     margin-top: 15px;
-    opacity: 0.9;
+    padding: 0 10px;
 }
-/* --- ෆෝන් එක සඳහා විශේෂ සැකසුම් --- */
-@media (max-width: 768px) {
+/* --- විශේෂයෙන්ම ෆෝන් එක සඳහා (Responsiveness) --- */
+@media screen and (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* උඩ සිට පල්ලමට සැකසීම */
-        gap: 15px;
+        flex-direction: column; /* ලෝගෝ එක උඩටත් මෙනු එක යටටත් ගැනීමට */
+        text-align: center;
     }
-    .menu ul {
-        flex-wrap: wrap;
-        justify-content: center;
+   
+    .menu {
+        margin-top: 10px;
     }
-    .menu ul li {
+    .menu ul li a {
         margin: 5px;
-    }
-    .main {
-        background-attachment: scroll; /* ෆෝන් වලදී මෙය වඩාත් හොඳින් වැඩ කරයි */
+        font-size: 12px;
     }
 }
