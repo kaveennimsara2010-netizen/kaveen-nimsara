@@ -173,3 +173,36 @@ ul li a:hover{
         font-size: 12px;
     }
 }
+
+/* --- ෆෝන් එකට විතරක් බලපාන සැකසුම් (Mobile Only) --- */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-wrap: nowrap !important;
+        padding: 10px 2% !important;
+        justify-content: flex-start !important;
+    }
+    .menu ul {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 5px !important; /* ෆෝන් එකේදී බොත්තම් අතර පරතරය තවත් අඩු කළා */
+    }
+    .menu ul li a {
+        font-size: 10px !important; /* ෆෝන් එකේදී විතරක් අකුරු කුඩා වේ */
+        padding: 0 !important;
+    }
+   
+    .logo-text {
+        font-size: 16px !important; /* Logo එකත් ෆෝන් එකේදී මඳක් කුඩා කළා ඉඩ ඉතිරි කරගන්න */
+        margin-right: 10px;
+    }
+}
+/* --- ලැප්ටොප් සහ ලොකු තිර සඳහා (Desktop) --- */
+@media screen and (min-width: 769px) {
+    .menu ul li a {
+        font-size: 16px; /* ලැප්ටොප් එකේදී අකුරු සාමාන්‍ය ලොකු ප්‍රමාණයෙන් පෙනේ */
+    }
+   
+    .navbar {
+        padding: 20px 5%;
+    }
+}
