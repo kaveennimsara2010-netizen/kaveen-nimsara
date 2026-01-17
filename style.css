@@ -23,13 +23,26 @@
     float: left;
     height: 70px;
 }
-.logo{
+
+
+.icon a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img{
+    width: 75px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.logo-text{
     color: #48ff00;
-    font-size: 35px;
-    font-family: arial;
-    padding-left: 20px;
-    float: left;
-    padding-top: 10px;
+    font-size: 28px;
+    font-family: 'Arial', sans-serif;
+    margin: o;
+    text-transform: uppercase;
 }
 
 .menu{
