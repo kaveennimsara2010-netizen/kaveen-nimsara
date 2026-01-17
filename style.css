@@ -1,4 +1,4 @@
-/* සියලුම උපාංග සඳහා පොදු සැකසුම් */
+/* පොදු සැකසුම් */
 * {
     margin: 0;
     padding: 0;
@@ -6,36 +6,33 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    overflow-x: hidden; /* පැත්තට scroll වීම නවත්වයි */
+    overflow-x: hidden; /* පැත්තට scroll වීම වළක්වයි */
+    width: 100%;
 }
-/* ප්‍රධාන පසුබිම */
 .main {
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('4.jpg');
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
 }
-/* Navbar සැකසුම */
+/* Navbar එක පිළිවෙළකට සැකසීම */
 .navbar {
     width: 100%;
-    height: auto;
     display: flex;
-    flex-wrap: wrap; /* ෆෝන් වලදී බිමට වැටීමට */
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
+    padding: 20px 5%;
+    background: rgba(0, 0, 0, 0.7);
+    flex-wrap: wrap; /* ෆෝන් එකේදී බිමට වැටීමට */
 }
 .logo-text {
     color: #48ff00;
     font-size: 24px;
     font-weight: bold;
-    text-decoration: none;
 }
 .menu ul {
     display: flex;
@@ -44,35 +41,36 @@ body {
 .menu ul li a {
     text-decoration: none;
     color: white;
-    font-weight: 500;
-    font-size: 14px;
     margin: 0 15px;
+    font-size: 14px;
+    font-weight: 500;
     transition: 0.3s;
 }
 .menu ul li a:hover {
     color: #48ff00;
 }
-/* Search Bar */
+/* සෙවුම් කොටස */
 .search {
     display: flex;
 }
 .srch {
-    padding: 8px;
+    width: 120px;
+    padding: 7px;
     border: 1px solid #48ff00;
     background: transparent;
     color: white;
-    border-radius: 5px 0 0 5px;
     outline: none;
+    border-radius: 5px 0 0 5px;
 }
 .btn {
-    padding: 8px 15px;
+    padding: 7px 15px;
     background: #48ff00;
     border: none;
-    border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-weight: bold;
+    border-radius: 0 5px 5px 0;
 }
-/* මැද විස්තරය (Content) */
+/* මැද අකුරු (Content) හරි මැදට ගැනීම */
 .content {
     flex: 1;
     display: flex;
@@ -84,22 +82,22 @@ body {
     padding: 20px;
 }
 .content h1 {
-    font-size: clamp(2rem, 8vw, 4rem); /* තිරයේ ප්‍රමාණය අනුව අකුරු වෙනස් වේ */
-    margin-bottom: 10px;
+    font-size: clamp(28px, 8vw, 60px); /* අකුරු ඉබේම ප්‍රමාණය වෙනස් වේ */
+    line-height: 1.2;
 }
-.content h1 span {
+.content span {
     color: #48ff00;
 }
 .content p {
     max-width: 600px;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: clamp(14px, 2vw, 18px);
+    margin-top: 15px;
+    opacity: 0.9;
 }
-/* --- MOBILE RESPONSIVE (ෆෝන් එකට ගැලපෙන ලෙස) --- */
+/* --- ෆෝන් එක සඳහා විශේෂ සැකසුම් --- */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        flex-direction: column; /* උඩ සිට පල්ලමට සැකසීම */
         gap: 15px;
     }
     .menu ul {
@@ -110,6 +108,6 @@ body {
         margin: 5px;
     }
     .main {
-        background-attachment: scroll; /* ෆෝන් වල පින්තූරය පෙනීමට මෙය අත්‍යවශ්‍යයි */
+        background-attachment: scroll; /* ෆෝන් වලදී මෙය වඩාත් හොඳින් වැඩ කරයි */
     }
 }
