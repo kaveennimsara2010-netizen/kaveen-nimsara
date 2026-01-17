@@ -20,7 +20,7 @@ html, body {
     flex-direction: column;
 }
 .navbar{
-    width: 810px;
+    width: 100vw;
     height: 75px;
     margin: auto;
 }
@@ -38,11 +38,7 @@ html, body {
     gap: 10px;
 }
 
-.logo-img{
-    width: 75px;
-    height: auto;
-    border-radius: 50%;
-}
+
 
 .logo-text{
     color: #48ff00;
