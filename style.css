@@ -6,12 +6,13 @@
 }
 .main {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background: linear-gradient(to top, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.7) 50%), url(4.jpg); 
-    background-size: cover;
-    background-position: center;
+    background-size: 100% 100%;
+    background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    position: relative;
 }
 
 .navbar {
