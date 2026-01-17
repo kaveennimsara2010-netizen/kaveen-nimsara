@@ -206,3 +206,22 @@ ul li a:hover{
         padding: 20px 5%;
     }
 }
+
+/* මෙනු බටන් එබෙන්නේ නැති ප්‍රශ්නය විසඳීමට */
+.navbar {
+    position: relative; /* Navbar එක අනෙක් ඒවට උඩින් තබයි */
+    z-index: 1000 !important; /* මෙය අනිවාර්යයෙන්ම අවශ්‍යයි - සියල්ලටම වඩා උඩින් Navbar එක තබයි */
+    pointer-events: auto !important; /* බටන් ක්ලික් කිරීමේ හැකියාව තහවුරු කරයි */
+}
+.menu ul li a {
+    display: inline-block;
+    position: relative;
+    z-index: 1001 !important;
+    pointer-events: auto !important;
+    padding: 5px !important; /* එබීමට පහසු වන ලෙස touch area එක වැඩි කිරීම */
+}
+/* පහළ තියෙන content එක Navbar එක යටට යෑම වැළැක්වීමට */
+.content {
+    position: relative;
+    z-index: 1; /* Navbar එකට වඩා අඩු අගයක් ලබා දේ */
+}
