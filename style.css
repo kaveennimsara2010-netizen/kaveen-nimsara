@@ -34,18 +34,41 @@ html, body {
     font-size: 22px;
     font-weight: bold;
 }
+
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
 .menu ul {
     display: flex;
     list-style: none;
     flex-wrap: wrap; /* මෙනු එක පිට පැනීම වළක්වයි */
     justify-content: center;
+    padding: 0;
+    margin: 0;
 }
+
+.menu ul li{
+    margin: 5px 15px;
+}
+
+
 .menu ul li a {
     text-decoration: none;
     color: white;
     margin: 5px 10px;
-    font-size: 13px;
+    font-size: 14px;
     white-space: nowrap; /* අකුරු කැඩීම වළක්වයි */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+.menu ul li a:hover{
+    color: #48ff00;
 }
 /* මැද Content එක - ෆෝන් එකේදී මැදට ගැනීමට */
 .content {
