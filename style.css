@@ -1,35 +1,40 @@
-*{
+* {
     margin: 0;
     padding: 0;
-
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
 }
-
-.main{
+.main {
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(2.jpg);
-    background-position: center;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.7) 50%), url(4.jpg); 
     background-size: cover;
-    height: 109vh;
 }
 
-.navbar{
+.navbar {
     width: 1200px;
     height: 75px;
     margin: auto;
 }
 
+.logo{
+    color: #48ff00;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    font-weight: 800;
+}
+
 .icon{
-    width: 200px;
+     width: 200px;
     float: left;
     height: 70px;
 }
 
-
-.icon a{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.icon .logo {
+    color: #48ff00;
+    font-size: 30px;
+    letter-spacing: 2px;
 }
+
 
 .logo-img{
     width: 75px;
@@ -45,10 +50,13 @@
     text-transform: uppercase;
 }
 
+
 .menu{
     width: 400px;
     float: left;
     height: 70px;
+
+
 }
 
 ul{
@@ -77,10 +85,85 @@ ul li a:hover{
     color: #48ff00;
 }
 
-.search{
-    width: 330px;
-    float: left;
-    margin-left: 270px;
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 30px;
+    transition: 0.4s ease;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 15px;
+}
+.menu ul li a:hover {
+    color: #48ff00;
+    text-shadow: 0 0 10px #48ff00; 
+    border-bottom: 2px solid #48ff00;
+    padding-bottom: 5px;
+}
+
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    padding: 30px;
+    border-radius: 20px;
+    display: inline-block;
+}
+.content h1 {
+    font-size: 60px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif; 
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+.content span {
+    color: #48ff00;
+    font-size: 45px;
+}
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    max-width: 700px;
+}
+
+.cn {
+    width: 180px;
+    height: 45px;
+    background: #48ff00;
+    border: none;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.cn a {
+    text-decoration: none;
+    color: #000;
+}
+.cn:hover {
+    background-color: #fff;
+    box-shadow: 0 0 20px #48ff00;
+    transform: scale(1.1);
 }
 
 .srch{
@@ -117,90 +200,4 @@ ul li a:hover{
 
 .srch:focus{
     outline: none;
-}
-
-.content{
-    width: 100%;
-    min-height: 85vh;
-    max-width: 800px;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    padding: 0 20px;
-    box-sizing: border-box;
-    margin: auto;
-    padding-top: 150px;
-}
-
-.content .par{
-    max-width: 700px;
-    font-family: 'segoe ui',arial,sans-serif;
-    font-size: clamp(15px,4vw, 18px);
-    line-height: 1.6;
-    letter-spacing: 1px;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-}
-
-.content h1{
-    font-family: 'Times New Roman', serif;
-    font-size: clamp(35px, 10vw, 65px);
-    font-weight: bold;
-    margin-bottom: 15px;
-    line-height: 1.1;
-    margin-left: 50px;
-    text-shadow: 2px 2px 15px rgba(0,0,0,0.7);
-}
-
-.content h1 span{
-    color: #48ff00;
-    font-size: inherit;
-    display: inline-block;
-}
-
-.content .cn{
-    width: 180px;
-    height: 50px;
-    background: #48ff00;
-    border: none;
-    margin-top: 20px;
-    font-size: 18px;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: 0.4s ease;
-}
-
-.content .cn a{
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    transition: 0.3s ease;
-    display: block;
-    line-height: 50px;
-}
-
-
-.content .cn:hover{
-    background-color: #fff;
-    transform: scale(1.05);
-}
-
-
-
-body {
-    background-image: linear-gradient(rgba(0,0,0,0.5)), url('2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
-    margin: 0;
-}
-
-html{
-    scroll-behavior: smooth;
 }
