@@ -42,7 +42,55 @@
         <video autoplay muted loop playsinline class="back-video"><source src="video.mp4" type="video/mp4">
         </video>
 
+        <a href="https://wa.me/94759467056" class="whatsapp-btn" target="blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50">
+        </a>
+
     </div>
+
+    <section class="comment-area">
+    <h2>අපගේ සේවාව ගැන ඔබේ අදහස (Customer Feedback)</h2>
+   
+    <form id="comment-form">
+        <div class="input-group">
+            <input type="text" name="Name" placeholder="ඔබේ නම (Your Name)" required>
+        </div>
+        <div class="input-group">
+            <textarea name="Comment" placeholder="ඔබේ අදහස (Your Comment)" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn" id="submit-button">පළ කරන්න (Post Comment)</button>
+    </form>
+   
+    <p id="msg" style="margin-top: 15px; font-weight: bold;"></p>
+</section>
+<script>
+  // ඔයා කොපි කරගත්ත URL එක මෙතන තියෙනවා
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzXUZmXY46b3Ak8BgIJLEbyZWj2mt3Yxau6Y7E_VYcMEJLLpcZMLTc LchV59WuzXa_d/exec'
+  const form = document.getElementById('comment-form')
+  const msg = document.getElementById('msg')
+  const btn = document.getElementById('submit-button')
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    btn.disabled = true
+    btn.innerHTML = "යවමින් පවතී... (Sending...)"
+   
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+          msg.innerHTML = "ස්තුතියි! ඔබේ අදහස සාර්ථකව සේව් වුණා. ❤️"
+          msg.style.color = "#48ff00"
+          btn.disabled = false
+          btn.innerHTML = "Post Comment"
+          form.reset()
+      })
+      .catch(error => {
+          console.error('Error!', error.message)
+          msg.innerHTML = "කණගාටුයි, දෝෂයක් සිදු වුණා. නැවත උත්සාහ කරන්න."
+          msg.style.color = "red"
+          btn.disabled = false
+          btn.innerHTML = "Post Comment"
+      })
+  })
+</script>
     
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>

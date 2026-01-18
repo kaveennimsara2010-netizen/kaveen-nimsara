@@ -1,4 +1,4 @@
-/* මූලික සැකසුම් - අකුරු පිට පැනීම වළක්වයි */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
 }
 html, body {
     width: 100%;
-    overflow-x: hidden; /* පැත්තට scroll වීම සම්පූර්ණයෙන්ම නවත්වයි */
+    overflow-x: hidden; 
     position: relative;
 }
 .main {
@@ -121,7 +121,7 @@ ul li a:hover{
 .srch:focus{
     outline: none;
 }
-/* ෆෝන් එකේදී Navbar එක ලස්සනට තබා ගැනීමට */
+
 @media (max-width: 768px) {
     .navbar {
         padding: 15px 3%;
@@ -136,7 +136,6 @@ ul li a:hover{
         font-size: 11px;
     }
 }
-/* මැද Content එක - ෆෝන් එකේදී මැදට ගැනීමට */
 .content {
     flex: 1;
     display: flex;
@@ -148,7 +147,7 @@ ul li a:hover{
     color: white;
 }
 .content h1 {
-    font-size: clamp(24px, 7vw, 50px); /* තිරය අනුව අකුරු ප්‍රමාණය වෙනස් වේ */
+    font-size: clamp(24px, 7vw, 50px); 
     width: 100%;
     max-width: 90vw;
 }
@@ -162,10 +161,9 @@ ul li a:hover{
 .content span{
     color: #48ff00;
 }
-/* --- විශේෂයෙන්ම ෆෝන් එක සඳහා (Responsiveness) --- */
 @media screen and (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* ලෝගෝ එක උඩටත් මෙනු එක යටටත් ගැනීමට */
+        flex-direction: column; 
         text-align: center;
     }
    
@@ -178,7 +176,6 @@ ul li a:hover{
     }
 }
 
-/* --- ෆෝන් එකට විතරක් බලපාන සැකසුම් (Mobile Only) --- */
 @media screen and (max-width: 768px) {
     .navbar {
         flex-wrap: nowrap !important;
@@ -188,22 +185,22 @@ ul li a:hover{
     .menu ul {
         display: flex !important;
         flex-wrap: nowrap !important;
-        gap: 5px !important; /* ෆෝන් එකේදී බොත්තම් අතර පරතරය තවත් අඩු කළා */
+        gap: 5px !important;
     }
     .menu ul li a {
-        font-size: 10px !important; /* ෆෝන් එකේදී විතරක් අකුරු කුඩා වේ */
+        font-size: 10px !important; 
         padding: 0 !important;
     }
    
     .logo-text {
-        font-size: 16px !important; /* Logo එකත් ෆෝන් එකේදී මඳක් කුඩා කළා ඉඩ ඉතිරි කරගන්න */
+        font-size: 16px !important; 
         margin-right: 10px;
     }
 }
-/* --- ලැප්ටොප් සහ ලොකු තිර සඳහා (Desktop) --- */
+
 @media screen and (min-width: 769px) {
     .menu ul li a {
-        font-size: 16px; /* ලැප්ටොප් එකේදී අකුරු සාමාන්‍ය ලොකු ප්‍රමාණයෙන් පෙනේ */
+        font-size: 16px;
     }
    
     .navbar {
@@ -211,23 +208,22 @@ ul li a:hover{
     }
 }
 
-/* මෙනු බටන් එබෙන්නේ නැති ප්‍රශ්නය විසඳීමට */
+
 .navbar {
-    position: relative; /* Navbar එක අනෙක් ඒවට උඩින් තබයි */
-    z-index: 1000 !important; /* මෙය අනිවාර්යයෙන්ම අවශ්‍යයි - සියල්ලටම වඩා උඩින් Navbar එක තබයි */
-    pointer-events: auto !important; /* බටන් ක්ලික් කිරීමේ හැකියාව තහවුරු කරයි */
+    position: relative; 
+    z-index: 1000 !important; 
+    pointer-events: auto !important; 
 }
 .menu ul li a {
     display: inline-block;
     position: relative;
     z-index: 1001 !important;
     pointer-events: auto !important;
-    padding: 5px !important; /* එබීමට පහසු වන ලෙස touch area එක වැඩි කිරීම */
+    padding: 5px !important; 
 }
-/* පහළ තියෙන content එක Navbar එක යටට යෑම වැළැක්වීමට */
 .content {
     position: relative;
-    z-index: 1; /* Navbar එකට වඩා අඩු අගයක් ලබා දේ */
+    z-index: 1;
 }
 
 .back-video{
@@ -245,4 +241,81 @@ ul li a:hover{
     width: 100%;
     height: 100vh;
     overflow: hidden;
+}
+
+.whatsapp-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: transform 0.3 ease;
+}
+
+.whatsapp-btn:hover{
+    transform: scale(1.1);
+}
+
+.whatsapp-btn img{
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+}
+
+@media(max-width: 768px){
+    .whatsapp-btn img{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.comment-area{
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 15px;
+    border: 1px solid #48ff00;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.input-group{
+    margin-bottom: 15px;
+}
+
+.input-group input, .input-group textarea{
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+}
+
+.input-group input:focus, .input-group textarea:focus{
+    border-color: #48ff00;
+}
+
+.submit-btn{
+    width: 100%;
+    padding: 12px;
+    background: #48ff00;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover{
+    background: white;
+    transform: translateY(-2px);
+}
+
+.submit-btn:disabled{
+    background: #555;
+    cursor: not-allowed;
 }
