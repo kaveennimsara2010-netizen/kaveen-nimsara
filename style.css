@@ -268,54 +268,47 @@ ul li a:hover{
     }
 }
 
-.comment-area{
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 30px;
-    background: rgba(0,0,0,0.7);
+/* Comment Section එක සියලුම devices වලට ලස්සන කරන හැටි */
+.comment-area {
+    max-width: 90%; /* ෆෝන් එකේදී දෙපැත්තෙන් ඉඩ තැබීමට */
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* අඳුරු පසුබිම */
     border-radius: 15px;
     border: 1px solid #48ff00;
     color: white;
     text-align: center;
-    font-family: sans-serif;
 }
-
-.input-group{
+/* Input boxes ලස්සන කිරීම */
+.comment-area input, .comment-area textarea {
+    width: 100%; /* සම්පූර්ණ පළල ගැනීමට */
+    padding: 12px;
     margin-bottom: 15px;
+    background: #fff; /* අකුරු පැහැදිලිව පෙනීමට සුදු පසුබිම */
+    border: 2px solid #48ff00;
+    border-radius: 8px;
+    color: #000;
+    box-sizing: border-box; /* Padding නිසා පිටතට යාම වැළැක්වීමට */
 }
-
-.input-group input, .input-group textarea{
+/* Button එක ලස්සන කිරීම */
+.submit-btn {
     width: 100%;
-    padding: 12px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid #444;
-    border-radius: 5px;
-    color: white;
-    outline: none;
-}
-
-.input-group input:focus, .input-group textarea:focus{
-    border-color: #48ff00;
-}
-
-.submit-btn{
-    width: 100%;
-    padding: 12px;
+    padding: 15px;
     background: #48ff00;
-    color: black;
+    color: #000;
     font-weight: bold;
+    font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
 }
-
-.submit-btn:hover{
-    background: white;
-    transform: translateY(-2px);
-}
-
-.submit-btn:disabled{
-    background: #555;
-    cursor: not-allowed;
+/* ෆෝන් එක සඳහා විශේෂ වෙනස්කම් (Responsive) */
+@media screen and (max-width: 600px) {
+    .comment-area h2 {
+        font-size: 18px; /* අකුරු පොඩ්ඩක් කුඩා කිරීමට */
+    }
+   
+    .comment-area {
+        padding: 15px;
+    }
 }
